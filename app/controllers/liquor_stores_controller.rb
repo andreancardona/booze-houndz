@@ -1,0 +1,2 @@
+class LiquorStoresController < ApplicationController
+end
