@@ -55,3 +55,12 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
 gem 'yelp', require: 'yelp'
+
+gem 'json'
+
+
+gem "http"
+
+gem 'rubysl-yaml', '~> 2.1'
+
+gem 'figaro'

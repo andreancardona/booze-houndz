@@ -1,32 +1,37 @@
-# require "json"
-# require "http"
-# require "optparse"
-# require 'yaml'
-# require_relative '../config/environment'
-#
+require "json"
+require "http"
+require_relative '../config/environment'
+
 # Restaurant.destroy_all
 # Style.destroy_all
 # RestaurantStyle.destroy_all
-# ###################################7000 total results - make pull from multiple pages#####################
-# #####ADAPTED FROM YELP API's GITHUB
+
+#####ADAPTED FROM YELP API's GITHUB
 # keys = YAML.load_file('keys.yml')
-# API_KEY = keys['API_KEY']
+# API_KEY = 'ByzPmMgCvgNJgZVfgfjp1NqYlh8aWKeDWZxivrhJUsEaxAY7UlrrFUmSP77fqPUIwJRZdO9PoXDna6jTz3Ytow_qL01Z38pJUG6r7o2pljUYEANHQoXGZCY0XV5iWnYx'
+
+API_KEY = ENV["API_KEY"]
+
+API_HOST = "https://api.yelp.com"
+SEARCH_PATH = "/v3/businesses/search"
+BUSINESS_PATH = "/v3/businesses/"  # trailing / because we append the business id to the path
+
+
+
+
+
+def search(x)
+
+  url = "#{API_HOST}#{SEARCH_PATH}"
+
+  params = {term: "restaurant", location: "11 Broadway, New York, NY 10004", limit: 50, offset: x}
+  response = HTTP.auth("Bearer #{API_KEY}").get(url, params: params)
+  response.parse
+      byebug
+end
 #
-# API_HOST = "https://api.yelp.com"
-# SEARCH_PATH = "/v3/businesses/search"
-# BUSINESS_PATH = "/v3/businesses/"  # trailing / because we append the business id to the path
-#
-#
-#
-#
-#
-# def search(x)
-#   url = "#{API_HOST}#{SEARCH_PATH}"
-#   params = {term: "restaurant", location: "11 Broadway, New York, NY 10004", limit: 50, offset: x}
-#   response = HTTP.auth("Bearer #{API_KEY}").get(url, params: params)
-#   response.parse
-# end
-#
+search(10)
+
 # def get_add_page(x)
 #   yelp_entries = search(x).map {|k,v| v}
 #     #create Restaurant Instances
