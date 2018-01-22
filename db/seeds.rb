@@ -28,9 +28,20 @@ end
 def get_params
   yelp_hash = search
   parsed_array = yelp_hash["businesses"]
+  parsed_array.each do |attribute|
+    ls_name = attribute["name"]
+    ls_image = attribute["image_url"]
+    ls_latitude_coordinate = attribute["coordinates"]["latitude"]
+    ls_longitude_coordinate = attribute["coordinates"]["longitude"]
+    ls_price = attribute["price"]
+    ls_zip_code = attribute["location"]["zip_code"]
+    ls_display_address = attribute["location"]["display_address"]
+    ls_display_phone = attribute["display_phone"]
+    LiquorStore.create(name: ls_name, image: ls_image, latitude_coordinate: ls_latitude_coordinate, longitude_coordinate: ls_longitude_coordinate, price: ls_price, zip_code: ls_zip_code, display_address: ls_display_address, display_phone: ls_display_phone)
+  end
 end
 
-get_params
+
 
 
 # def get_add_page(x)
