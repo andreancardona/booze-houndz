@@ -7,30 +7,31 @@ require_relative '../config/environment'
 # RestaurantStyle.destroy_all
 
 #####ADAPTED FROM YELP API's GITHUB
-# keys = YAML.load_file('keys.yml')
-# API_KEY = 'ByzPmMgCvgNJgZVfgfjp1NqYlh8aWKeDWZxivrhJUsEaxAY7UlrrFUmSP77fqPUIwJRZdO9PoXDna6jTz3Ytow_qL01Z38pJUG6r7o2pljUYEANHQoXGZCY0XV5iWnYx'
 
 API_KEY = ENV["API_KEY"]
 
 API_HOST = "https://api.yelp.com"
 SEARCH_PATH = "/v3/businesses/search"
-BUSINESS_PATH = "/v3/businesses/"  # trailing / because we append the business id to the path
+# BUSINESS_PATH = "/v3/businesses/"  # trailing / because we append the business id to the path
 
 
 
 
 
-def search(x)
-
+def search
   url = "#{API_HOST}#{SEARCH_PATH}"
-
-  params = {term: "restaurant", location: "11 Broadway, New York, NY 10004", limit: 50, offset: x}
+  params = {term: "liquor_store", location: "New York City", limit: 50, offset: 950}
   response = HTTP.auth("Bearer #{API_KEY}").get(url, params: params)
   response.parse
-      byebug
 end
-#
-search(10)
+
+def get_params
+  yelp_hash = search
+  parsed_array = yelp_hash["businesses"]
+end
+
+get_params
+
 
 # def get_add_page(x)
 #   yelp_entries = search(x).map {|k,v| v}
