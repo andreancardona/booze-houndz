@@ -1,5 +1,6 @@
 class LiquorStoresController < ApplicationController
   def index
+
     if logged_in?
       @liquor_stores = current_user.liquor_stores
     else

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Mod2FinalProject</title>
+    <title>BoozeHounds</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -10,13 +10,13 @@
 
   <body>
     <div class="container">
-      <%= yield %>
-    </div>
+    <%= yield %>
+  </div>
 
-    <% if logged_in? %>
-      <%= button_to "Logout", sessions_path, method: :delete, class: "btn btn-danger" %>
-    <% else %>
-      <%= link_to "Login", login_path %>
-    <% end %>
+  <% if logged_in? %>
+  <%= button_to "Logout", sessions_path, method: :delete, class: "btn-btn-warning" %>
+  <% else %>
+  <%= link_to "Login", login_path %>
+  <% end %>
   </body>
 </html>
