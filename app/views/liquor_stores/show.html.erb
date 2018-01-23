@@ -1,0 +1,14 @@
+<h1><%= @liquor_store.name %></h1>
+
+<%= @liquor_store.price %>
+<p><%= @liquor_store.address1 %> <%= @liquor_store.address2 %></p>
+<p><%= @liquor_store.city %>, <%= @liquor_store.state %> <%= @liquor_store.zip_code %></p>
+<p><%= @liquor_store.display_phone %></p>
+
+
+<br>
+<img src="<%= @liquor_store.image %>" alt="">
+
+
+<br><br>
+More Liquor Stores in this neighborhood: <%= link_to @liquor_store.neighborhood.name, @liquor_store.neighborhood %>

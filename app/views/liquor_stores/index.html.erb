@@ -1,0 +1,6 @@
+<h1> ALL THE LIQUOR STORES</h1>
+<ul>
+  <% @liquor_stores.each do |ls| %>
+    <li><%= link_to ls.name, ls %> | <%= link_to ls.neighborhood.name, ls.neighborhood %></li></li>
+  <% end %>
+</ul>

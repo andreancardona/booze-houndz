@@ -1,6 +1,6 @@
 <h1> ALL THE NEIGHBORHOODS</h1>
 <ul>
-  <%@neighborhoods.each do |n|%>
-  <li><%=link_to n.name, n%></li>
-  <%end%>
+  <% @neighborhoods.each do |n| %>
+  <li><%= link_to n.name, n %></li>
+  <% end %>
 </ul>
