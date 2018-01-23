@@ -71,3 +71,6 @@ def create_liquor_stores
 end
 
 create_liquor_stores
+
+User.create(name: "Andrea", password:"sherman")
+User.create(name: "Lindsay", password:"arlo")
