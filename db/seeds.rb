@@ -34,7 +34,6 @@ def create_neighborhoods
 
   yelp_hash.each do |page|
     parsed_array = page["businesses"]
-
     parsed_array.each do |attribute|
       ls_zip_code = attribute["location"]["zip_code"]
       Neighborhood.find_or_create_by(name: ls_zip_code)
