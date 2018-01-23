@@ -1,5 +1,8 @@
 <h1><%= @user.name %></h1>
 
+<p><%= link_to "Find a liquor store by location", liquor_stores_path %></p>
+
+
 <% provide(:title, @user.name) %>
 <div class="row">
   <aside class="col-md-4">
@@ -22,6 +25,7 @@
 <ul>
   <% @user.reviews.each do |r| %>
     <li><%= r.content %> | <%= r.rating %></li>
-      Liquor Store info: <%= link_to r.liquor_store.name, r.liquor_store %>
+      Liquor Store info: <%= link_to r.liquor_store.name, r.liquor_store %><br>
+      <img src="<%= r.liquor_store.image %>" alt="">
   <% end %>
 </ul>
