@@ -9,6 +9,14 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
+
+    <% if logged_in? %>
+      <%= button_to "Logout", sessions_path, method: :delete, class: "btn btn-danger" %>
+    <% else %>
+      <%= link_to "Login", login_path %>
+    <% end %>
   </body>
 </html>
