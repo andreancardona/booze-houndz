@@ -5,6 +5,14 @@
 <p><%= @liquor_store.city %>, <%= @liquor_store.state %> <%= @liquor_store.zip_code %></p>
 <p><%= @liquor_store.display_phone %></p>
 
+<br><br>
+<h3>Reviews</h3>
+<ul>
+  <% @liquor_store.reviews.each do |r| %>
+    <li><%= r.content %> | <%= r.rating %></li>
+      Review by <%= link_to r.user.name, r.user %>
+  <% end %>
+</ul>
 
 <br>
 <img src="<%= @liquor_store.image %>" alt="">
