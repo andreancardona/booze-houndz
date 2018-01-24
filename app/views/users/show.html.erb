@@ -1,6 +1,6 @@
 <h2>Hello, <%= @user.name %>!</h2>
 
-<% if logged_in? %>
+<% provide(:title, @user.name) %>
   <div class="row">
     <aside class="col-md-4">
       <section class="stats">
@@ -8,7 +8,7 @@
       </section>
     </aside>
   </div>
-<% end %>
+
 
 <p><%= link_to "Find a liquor store by location", liquor_stores_path %></p>
 
