@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   # end
   # # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   # resources :relationships, only: [:create, :destroy]
+  
   get "signup", to: "users#new", as: "signup"
   get "login", to: "sessions#new", as: "login"
   post "sessions", to: "sessions#create", as: "sessions"

@@ -31,7 +31,6 @@ end
 
 def create_neighborhoods
   yelp_hash = search
-
   yelp_hash.each do |page|
     parsed_array = page["businesses"]
     parsed_array.each do |attribute|
