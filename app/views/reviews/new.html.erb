@@ -1,0 +1,11 @@
+<h1>CREATE A REVIEW</h1>
+
+<%= form_for @review  do |f| %>
+  <%= f.label :content %>
+  <%= f.text_field :content%>
+
+  <%= f.label :rating %>
+  <%= f.number_field :rating%>
+  <%= f.hidden_field :liquor_store_id,value: @liquor_store.id %>
+  <%= f.submit %>
+<% end %>

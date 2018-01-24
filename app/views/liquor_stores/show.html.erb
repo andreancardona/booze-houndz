@@ -13,6 +13,7 @@
       Review by <%= link_to r.user.name, r.user %>
   <% end %>
 </ul>
+<h4><%= link_to "Create a Review", reviews_new_path(liquor_store: @liquor_store), method: :post  %></h4>
 
 <br>
 <img src="<%= @liquor_store.image %>" alt="">
