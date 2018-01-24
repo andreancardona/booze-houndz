@@ -1,5 +1,15 @@
 <h2>Hello, <%= @user.name %>!</h2>
 
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="stats">
+        <%= render 'shared/stats' %>
+      </section>
+    </aside>
+  </div>
+<% end %>
+
 <p><%= link_to "Find a liquor store by location", liquor_stores_path %></p>
 
 <p><%= link_to "Find your Booze Buddies!", users_path %></p>
