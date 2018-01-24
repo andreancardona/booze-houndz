@@ -32,7 +32,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    User.update(user_params)
+    @user.update(user_params)
 
     redirect_to @user
   end
