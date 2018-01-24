@@ -63,6 +63,7 @@ ZIP_ARRAY =
     {"Stapleton and St. George"=>["10301", "10304", "10305"]},
     {"Mid-Island"=>["10314"]}]}]
 
+
 def search
   count = 0
   all_responses = []
