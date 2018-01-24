@@ -9,3 +9,5 @@
   <%= f.hidden_field :liquor_store_id,value: @liquor_store.id %>
   <%= f.submit %>
 <% end %>
+
+<%= button_to "Delete", @review, method: :delete %>
