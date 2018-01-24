@@ -4,10 +4,13 @@
   <%= f.label :name %>
   <%= f.text_field :name %>
   <br />
-  <%= f.label :password %>
-  <%= f.text_field :password %>
+  <%= f.label :new_password %>
+  <%= f.password_field :password %>
+
+  <%= f.label :confirm_new_password %>
+  <%= f.password_field :password_confirmation%>
 
   <%= f.submit %>
 <% end %>
 
-<%= button_to "Delete User", @user, method: :delete %>
+<%= button_to "Delete Your Profile", @user, method: :delete %>

@@ -2,6 +2,8 @@
 
 <p><%= link_to "Find a liquor store by location", liquor_stores_path %></p>
 
+<p><%= link_to "Find your Booze Buddies!", users_path %></p>
+<%= button_to "Edit Profile", edit_user_path, method: :get, class: "btn-btn-warning" %>
 <h3>Your Reviews</h3>
 <ul>
   <% @user.reviews.each do |r| %>
