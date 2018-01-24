@@ -14,7 +14,7 @@ class User < ApplicationRecord
   has_many :reviews
   has_many :liquor_stores, through: :reviews
 
-
+  
 
   def follow(other_user)
     following << other_user
