@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :neighborhoods, only: [:index, :show]
   resources :liquor_stores, only: [:index, :show]
   resources :users, only: [:index, :new, :create, :show, :edit, :update, :destroy]
-  resources :reviews, only: [:edit, :create, :update, :destroy]
+  resources :reviews, only: [:create, :update, :destroy]
   resources :users do
     member do
       get :following, :followers
@@ -17,5 +17,6 @@ Rails.application.routes.draw do
   post "sessions", to: "sessions#create", as: "sessions"
   delete "sessions", to: "sessions#destroy"
   post "reviews/new", to: "reviews#new"
+  post "reviews/edit", to: "reviews#edit"
   resources :relationships, only: [:create, :destroy]
 end

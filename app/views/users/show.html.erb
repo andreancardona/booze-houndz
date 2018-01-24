@@ -22,6 +22,8 @@
   <% @user.reviews.each do |r| %>
     <li><%= r.content %> | <%= r.rating %></li>
       Liquor Store info: <%= link_to r.liquor_store.name, r.liquor_store %><br>
+
+      <%= link_to "Edit Review", reviews_edit_path(liquor_store: r.liquor_store, review: r), method: :post  %><br>
       <img src="<%= r.liquor_store.image %>" alt="">
   <% end %>
 </ul>

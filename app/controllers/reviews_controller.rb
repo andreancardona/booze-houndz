@@ -15,9 +15,15 @@ class ReviewsController < ApplicationController
   end
 
   def edit
+    @review = Review.find(params[:review])
+    @liquor_store = LiquorStore.find(params[:liquor_store])
   end
 
   def update
+    @review = Review.find(params[:id])
+    @review.update(review_params)
+    @user = @review.user
+    redirect_to @user
   end
 
   def destroy
