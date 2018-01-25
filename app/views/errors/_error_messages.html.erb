@@ -1,0 +1,7 @@
+<% if flash[:errors] %>
+  <ul class="error">
+    <% flash[:errors].each do |e| %>
+      <br><li><%= e %></li>
+    <% end %>
+  </ul>
+<% end %>
