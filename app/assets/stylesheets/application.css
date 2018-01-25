@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+ .images {
+   max-height: 500px !important;
+   max-width: 500px !important;
+ }
+
+ .image {
+   width: 100%;
+
+ }
+
+ .front-image {
+   max-height: 500px !important;
+   max-width: 500px !important;
+ }
