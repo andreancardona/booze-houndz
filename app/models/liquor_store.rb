@@ -20,6 +20,8 @@ class LiquorStore < ApplicationRecord
   def average_rating
     if ratings_by_ls.length > 0
       sum_of_ratings / (ratings_by_ls.length)
+    else
+      0
     end
   end
 end
