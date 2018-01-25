@@ -1,14 +1,22 @@
-<h3>Just moved to NYC? Confused why you can't buy bourbon at a bodega?</h3>
-<h1>Welcome to Booze Hounds!</h1>
-<p>Login:</p>
-<h3><%= render "errors/error_messages"%></h3>
-<%= form_tag sessions_path do %>
-  <%= label_tag "Name" %>
-  <%= text_field_tag :name %>
-  <%= label_tag "Password" %>
-  <%= password_field_tag :password %>
+<div class= "header"
+  <h1>Welcome to Booze Hounds!</h1>
+</div>
+<div class= "login"
+</div>
+  <h3><%= render "errors/error_messages"%></h3>
+  <%= form_tag sessions_path do %>
+  <div class= "name_password"
+    <%= label_tag "Name" %>
+    <%= text_field_tag :name %>
+    <%= label_tag "Password" %>
+    <%= password_field_tag :password %>
   <%= submit_tag "Show me the booze!" %>
+    </div>
 <% end %>
-<br>
-<p>Or create a new account:</p>
+  <br>
+<div class= "create_new_account"
+<%= label_tag "Or Create a New Account:" %>
+</div>
+<div class= "create_new_account_button"
 <%= button_to "Sign Up", new_user_path, method: :get, class: "btn-btn-warning" %>
+</div>

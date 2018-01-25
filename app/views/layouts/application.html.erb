@@ -7,20 +7,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel=”stylesheet” href=”index.css”>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Voltaire" rel="stylesheet">  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="/assets/application.css">
 </head>
-<body style="height:1500px">
+<body style="height:150%">
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand">Booze Hounds</a>
     </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-    </ul>
   </div>
 </nav>
 
@@ -29,6 +26,7 @@
 <div class="jumbotron">
 <body>
   <div class="container">
+
   <%= yield %>
 </div>
 </div>
@@ -42,20 +40,17 @@
       <a class="navbar-brand">Booze Hounds</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
       <li><%= link_to "Profile", current_user %></li>
       <li><%= link_to "Booze Buddies", users_path %></li>
       <li><%= link_to "Stores by name", liquor_stores_path %></li>
       <li><%= link_to "Stores by zip code", neighborhoods_path %></li>
-      <li><%= button_to "Logout", sessions_path, method: :delete%></li>
+      <li><%= button_to "Logout", sessions_path, class: "btn" , method: :delete%></li>
     </ul>
   </div>
 </nav>
 <% end %>
 
 <div class= "front-image">
-<img class="front-image"<a href="https://imgur.com/a/MHAGm"</a>
 </div>
-
 </body>
 </html>

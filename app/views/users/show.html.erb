@@ -1,5 +1,7 @@
-<h2>Let's party, <%= @user.name %>!</h2>
-
+<div class= "profile_header"
+<h2><%= @user.name %>, let's grab some drinks!</h2>
+</div>
+<div class="user_stats"
 <% provide(:title, @user.name) %>
   <div class="row">
     <aside class="col-md-4">
@@ -11,30 +13,40 @@
    <%= render 'follow_form' if logged_in? %>
  </div>
 </div>
+</div>
 
  <br><br>
-
-Find liquor stores!
-<%= link_to "by name", liquor_stores_path %>
-<%= link_to "by zip code", neighborhoods_path %>
-
+<div class="body">
+<div class= "find_your_liquor_store"
+<%= label_tag "Find your liquor store" %>
+| <%= link_to "by name", liquor_stores_path %>
+| <%= link_to "by zip code", neighborhoods_path %>
+</div>
 <p><%= link_to "Find more Booze Buddies!", users_path %></p>
 
 <% if current_user == @user %>
+<div class="edit_profile_button" >
   <%= button_to "Edit Profile", edit_user_path, method: :get, class: "btn-btn-warning" %>
+</div>
 <% end %>
 
-<h3>Booze Reviews</h3>
+<div class= "booze_review_header"
+<h3>Booze Reviews:</h3>
+</div>
+<div class= "booze_review"
 <ul>
   <% @user.reviews.each do |r| %>
-    <li><%= link_to r.liquor_store.name, r.liquor_store %><br>
-      <%= r.content %>  |  Rating: <%= r.rating %> stars</li>
-
+    <div class= "liquor_store_name">
+      <%= link_to r.liquor_store.name, r.liquor_store%>
+      </div>
+      <div class= "review_content"<li><%= r.content %>  |  Rating: <%= r.rating %> stars</li></div>
         <% if current_user == r.user %>
-          <%= link_to "Edit Review", reviews_edit_path(liquor_store: r.liquor_store, review: r, user: current_user) %><br>
+        <div class="edit_button" <%= button_to "Edit Review", reviews_edit_path(liquor_store: r.liquor_store, review: r, user: current_user) %></div><br>
         <% end %>
       <div class= "images">
       <img class="image"src="<%= r.liquor_store.image %>">
     </div>
   <% end %>
 </ul>
+</div>
+</div>

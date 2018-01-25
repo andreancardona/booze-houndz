@@ -13,6 +13,22 @@
  *= require_tree .
  *= require_self
  */
+ .navbar-header{
+   font-family: 'Voltaire', sans-serif; !important;
+ }
+ .header {
+   padding-top: 20px !important;
+   margin-left: 100px !important;
+   font-family: 'Amatic SC', cursive;
+   font-size: 60px !important;
+ }
+
+ .login {
+   padding-top: 20px !important;
+   font-family: 'Voltaire', sans-serif !important;
+   font-size: 22px !important;
+ }
+
  .images {
    max-height: 500px !important;
    max-width: 500px !important;
@@ -23,7 +39,131 @@
 
  }
 
- .front-image {
-   max-height: 500px !important;
-   max-width: 500px !important;
+ .btn {
+   margin-top: 10%;
  }
+
+.front-image {
+  background-image: url("https://thumbs.dreamstime.com/b/bottles-alcohol-distilled-beverage-vector-set-ink-hand-drawn-style-isolated-white-63360198.jpg");
+  width: 100%;
+  height: 500px;
+}
+
+.name_password {
+  font-family: 'Voltaire', sans-serif !important;
+  font-size: 18px !important;
+  padding-left: 40px;
+}
+
+.create_new_account{
+  font-family: 'Voltaire', sans-serif !important;
+  font-size: 20px !important;
+  padding-left: 250px;
+}
+
+.create_new_account_button{
+  font-family: 'Voltaire', sans-serif !important;
+  font-size: 20px !important;
+  padding-left: 275px;
+}
+
+.profile_header{
+  border-bottom: solid black;
+  padding-top: 20px !important;
+  font-family: 'Amatic SC', cursive;
+  font-size: 60px;
+}
+
+.user_stats{
+  border-bottom: solid black;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  font-family: 'Amatic SC', cursive;
+  font-size: 20px !important;
+}
+
+
+.find_your_liquor_store{
+  padding-top: 20px !important;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px !important;
+}
+
+.booze_review_header{
+  padding-top: 20px !important;
+  font-family: 'Amatic SC', cursive;
+  font-size: 40px !important;
+}
+.booze_review{
+  padding-top: 20px !important;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px !important;
+}
+
+.liquor_store_name{
+  border-bottom: solid black;
+  padding-top: 20px !important;
+  font-family: 'Lekton', sans-serif;
+  font-size: 20px !important;
+}
+
+.review_content{
+  padding-top: 10px !important;
+  padding-left: 20px;
+  font-family: 'Gafata', sans-serif;
+  font-size: 18px !important;
+}
+
+.edit_button{
+  font-family: 'Voltaire', sans-serif !important;
+  font-size: 18px !important;
+  padding-top: 10px;
+}
+
+.edit_profile_button{
+  font-family: 'Voltaire', sans-serif !important;
+  font-size: 18px !important;
+  padding-top: 10px;
+}
+
+.body {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.show_following_header{
+  font-family: 'Amatic SC', cursive;
+  font-size: 60px;
+}
+
+.show_followers_header{
+  font-family: 'Amatic SC', cursive;
+  font-size: 60px;
+}
+
+
+.following_header{
+  padding-top: 10px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 40px;
+}
+
+.follower_header{
+  padding-top: 10px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 40px;
+}
+
+
+
+.followers{
+  padding-top: 10px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 26px;
+}
+
+.following{
+  padding-top: 10px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 26px;
+}
