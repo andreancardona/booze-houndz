@@ -14,8 +14,12 @@
   </div>
 
   <% if logged_in? %>
-  <%= link_to @user.name, @user %>
-  <%= button_to "Logout", sessions_path, method: :delete, class: "btn-btn-warning" %>
+    <p><%= link_to current_user.name, current_user %></p>
+    <p><%= link_to "Find more Booze Buddies!", users_path %></p>
+    Find liquor stores!
+    <%= link_to "by name", liquor_stores_path %>
+    <%= link_to "by zip code", neighborhoods_path %>
+    <%= button_to "Logout", sessions_path, method: :delete, class: "btn-btn-warning" %>
   <% end %>
 
   </body>
