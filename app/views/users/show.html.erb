@@ -1,4 +1,4 @@
-<h2>Hello, <%= @user.name %>!</h2>
+<h2>Let's party, <%= @user.name %>!</h2>
 
 <% provide(:title, @user.name) %>
   <div class="row">
@@ -12,18 +12,27 @@
  </div>
 </div>
 
+ <br><br>
 
-<p><%= link_to "Find a liquor store by location", liquor_stores_path %></p>
+Find liquor stores!
+<%= link_to "by name", liquor_stores_path %>
+<%= link_to "by zip code", neighborhoods_path %>
 
-<p><%= link_to "Find your Booze Buddies!", users_path %></p>
-<%= button_to "Edit Profile", edit_user_path, method: :get, class: "btn-btn-warning" %>
-<h3>Your Reviews</h3>
+<p><%= link_to "Find more Booze Buddies!", users_path %></p>
+
+<% if current_user == @user %>
+  <%= button_to "Edit Profile", edit_user_path, method: :get, class: "btn-btn-warning" %>
+<% end %>
+
+<h3>Booze Reviews</h3>
 <ul>
   <% @user.reviews.each do |r| %>
-    <li><%= r.content %> | <%= r.rating %></li>
+    <li><%= r.content %>|Rating: <%= r.rating %> stars</li>
       Liquor Store info: <%= link_to r.liquor_store.name, r.liquor_store %><br>
 
-      <%= link_to "Edit Review", reviews_edit_path(liquor_store: r.liquor_store, review: r), method: :post  %><br>
+      <% if current_user == r.user %>
+        <%= link_to "Edit Review", reviews_edit_path(liquor_store: r.liquor_store, review: r), method: :post  %><br>
+      <% end %>
       <img src="<%= r.liquor_store.image %>" alt="">
   <% end %>
 </ul>

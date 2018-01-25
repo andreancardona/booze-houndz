@@ -1,5 +1,6 @@
 <h1><%= @liquor_store.name %></h1>
 
+
 <%= @liquor_store.price %>
 <p><%= @liquor_store.address1 %> <%= @liquor_store.address2 %></p>
 <p><%= @liquor_store.city %>, <%= @liquor_store.state %> <%= @liquor_store.zip_code %></p>
@@ -9,7 +10,7 @@
 <h3>Reviews</h3>
 <ul>
   <% @liquor_store.reviews.each do |r| %>
-    <li><%= r.content %> | <%= r.rating %></li>
+    <li><%= r.content %> | Rating: <%= r.rating %> stars</li>
       Review by <%= link_to r.user.name, r.user %>
   <% end %>
 </ul>
@@ -20,4 +21,4 @@
 
 
 <br><br>
-More Liquor Stores in this neighborhood: <%= link_to @liquor_store.neighborhood.name, @liquor_store.neighborhood %>
+More Liquor Stores nearby: <%= link_to @liquor_store.neighborhood.name, @liquor_store.neighborhood %>

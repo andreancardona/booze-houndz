@@ -1,8 +1,13 @@
+<h3>Just moved to NYC? Confused why you can't buy bourbon at a bodega?</h3>
+<h1>Welcome to Booze Hounds!</h1>
+<p>Login:</p>
 <%= form_tag sessions_path do %>
   <%= label_tag "Name" %>
   <%= text_field_tag :name %>
   <%= label_tag "Password" %>
   <%= password_field_tag :password %>
-  <%= submit_tag "Sign In" %>
+  <%= submit_tag "Show me the booze!" %>
 <% end %>
+<br>
+<p>Or create a new account:</p>
 <%= button_to "Sign Up", new_user_path, method: :get, class: "btn-btn-warning" %>
