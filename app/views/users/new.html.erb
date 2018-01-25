@@ -1,5 +1,5 @@
 <h1>CREATE A USER</h1>
-
+<%= render "errors/error_messages"%>
 <%= form_for @user  do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
@@ -11,3 +11,5 @@
   <%= f.password_field :password_confirmation %>
   <%= f.submit %>
 <% end %>
+
+<%= link_to "Return to login", login_path %>

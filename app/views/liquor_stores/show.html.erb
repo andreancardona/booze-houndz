@@ -8,7 +8,12 @@
 
 <br><br>
 <h3>Reviews</h3>
-<p>Average rating: <%= @liquor_store.average_rating %></p>
+<% if @liquor_store.average_rating %>
+  <p>Average rating: <%= @liquor_store.average_rating %></p>
+<% else %>
+  <p>Be the first to rate this liquor store!</p>
+<% end %>
+
 <ul>
   <% @liquor_store.reviews.each do |r| %>
     <li><%= r.content %> | Rating: <%= r.rating %> stars</li>

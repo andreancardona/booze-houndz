@@ -22,6 +22,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to @user
     else
+      flash[:errors] = ["User Name already exists. Please try again."]
       redirect_to new_user_path
     end
   end

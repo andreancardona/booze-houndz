@@ -15,6 +15,7 @@ class User < ApplicationRecord
   has_many :liquor_stores, through: :reviews
 
 
+  validates :name, uniqueness: true
 
   def follow(other_user)
     following << other_user

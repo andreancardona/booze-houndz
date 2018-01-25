@@ -9,9 +9,14 @@ class ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     @review.user_id = current_user.id
-    @review.save
     @liquor_store = @review.liquor_store
-    redirect_to liquor_store_path(@liquor_store)
+    if @review.valid?
+      @review.save
+      redirect_to liquor_store_path(@liquor_store)
+    else
+      flash[:errors] = ["Please enter a whole number between 1 and 5."]
+      redirect_to reviews_new_path(liquor_store: @liquor_store)
+    end
   end
 
   def edit
