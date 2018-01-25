@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :reviews
   resources :neighborhoods, only: [:index, :show]
   resources :liquor_stores, only: [:index, :show]
+  resources :analytics, only: [:index]
   resources :users, only: [:index, :new, :create, :show, :edit, :update, :destroy]
   resources :reviews, only: [:create, :update, :destroy]
   resources :users do
@@ -18,5 +19,4 @@ Rails.application.routes.draw do
   delete "sessions", to: "sessions#destroy"
   post "reviews/new", to: "reviews#new"
   post "reviews/edit", to: "reviews#edit"
-  resources :relationships, only: [:create, :destroy]
 end
