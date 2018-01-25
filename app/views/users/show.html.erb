@@ -27,12 +27,12 @@ Find liquor stores!
 <h3>Booze Reviews</h3>
 <ul>
   <% @user.reviews.each do |r| %>
-    <li><%= r.content %>|Rating: <%= r.rating %> stars</li>
-      Liquor Store info: <%= link_to r.liquor_store.name, r.liquor_store %><br>
+    <li><%= link_to r.liquor_store.name, r.liquor_store %><br>
+      <%= r.content %>  |  Rating: <%= r.rating %> stars</li>
 
-      <% if current_user == r.user %>
-        <%= link_to "Edit Review", reviews_edit_path(liquor_store: r.liquor_store, review: r), method: :post  %><br>
-      <% end %>
+        <% if current_user == r.user %>
+          <%= link_to "Edit Review", reviews_edit_path(liquor_store: r.liquor_store, review: r), method: :post  %><br>
+        <% end %>
       <img src="<%= r.liquor_store.image %>" alt="">
   <% end %>
 </ul>

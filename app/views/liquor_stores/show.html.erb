@@ -8,17 +8,18 @@
 
 <br><br>
 <h3>Reviews</h3>
+<p>Average rating: <%= @liquor_store.average_rating %></p>
 <ul>
   <% @liquor_store.reviews.each do |r| %>
     <li><%= r.content %> | Rating: <%= r.rating %> stars</li>
       Review by <%= link_to r.user.name, r.user %>
   <% end %>
 </ul>
-<h4><%= link_to "Create a Review", reviews_new_path(liquor_store: @liquor_store), method: :post  %></h4>
+<h4><%= link_to "Write a Review", reviews_new_path(liquor_store: @liquor_store), method: :post  %></h4>
 
 <br>
 <img src="<%= @liquor_store.image %>" alt="">
 
 
 <br><br>
-More Liquor Stores nearby: <%= link_to @liquor_store.neighborhood.name, @liquor_store.neighborhood %>
+<%= link_to "See more Liquor Stores nearby", @liquor_store.neighborhood %>
