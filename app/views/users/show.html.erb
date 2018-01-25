@@ -31,7 +31,7 @@ Find liquor stores!
       <%= r.content %>  |  Rating: <%= r.rating %> stars</li>
 
         <% if current_user == r.user %>
-          <%= link_to "Edit Review", reviews_edit_path(liquor_store: r.liquor_store, review: r), method: :post  %><br>
+          <%= link_to "Edit Review", reviews_edit_path(liquor_store: r.liquor_store, review: r, user: current_user) %><br>
         <% end %>
       <div class= "images">
       <img class="image"src="<%= r.liquor_store.image %>">

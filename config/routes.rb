@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :reviews
   resources :neighborhoods, only: [:index, :show]
   resources :liquor_stores, only: [:index, :show]
   resources :analytics, only: [:index]
@@ -17,6 +16,6 @@ Rails.application.routes.draw do
   get "login", to: "sessions#new", as: "login"
   post "sessions", to: "sessions#create", as: "sessions"
   delete "sessions", to: "sessions#destroy"
-  post "reviews/new", to: "reviews#new"
-  post "reviews/edit", to: "reviews#edit"
+  get "reviews/new", to: "reviews#new"
+  get "reviews/edit", to: "reviews#edit"
 end
