@@ -1,26 +1,57 @@
+
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>BoozeHounds</title>
-    <%= csrf_meta_tags %>
+<html lang="en">
+<head>
+  <title>Booze Hounds</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel=”stylesheet” href=”index.css”>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body style="height:1500px">
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-    <div class="container">
-    <%= yield %>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand">Booze Hounds</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+    </ul>
   </div>
+</nav>
 
-  <% if logged_in? %>
-    <p><%= link_to current_user.name, current_user %></p>
-    <p><%= link_to "Find more Booze Buddies!", users_path %></p>
-    Find liquor stores!
-    <%= link_to "by name", liquor_stores_path %>
-    <%= link_to "by zip code", neighborhoods_path %>
-    <%= button_to "Logout", sessions_path, method: :delete, class: "btn-btn-warning" %>
-  <% end %>
+</body>
+</html>
+<div class="jumbotron">
+<body>
+  <div class="container">
+  <%= yield %>
+</div>
+</div>
+</div>
 
-  </body>
+<% if logged_in? %>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand">Booze Hounds</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><%= link_to "Profile", current_user %></li>
+      <li><%= link_to "Booze Buddies", users_path %></li>
+      <li><%= link_to "Stores by name", liquor_stores_path %></li>
+      <li><%= link_to "Stores by zip code", neighborhoods_path %></li>
+      <li><%= button_to "Logout", sessions_path, method: :delete%></li>
+    </ul>
+  </div>
+</nav>
+
+<% end %>
+
+</body>
 </html>
