@@ -66,3 +66,5 @@ gem 'rubysl-yaml', '~> 2.1'
 gem 'figaro'
 
 gem 'bcrypt', '~> 3.1.7'
+
+gem 'rspec-rails'

@@ -26,9 +26,13 @@ class ReviewsController < ApplicationController
 
   def update
     @review = Review.find(params[:id])
-    @review.update(review_params)
-    @user = @review.user
-    redirect_to @user
+    if @review.update(review_params)
+      @user = @review.user
+      redirect_to @user
+    else
+      flash[:errors] = ["Please enter a whole number between 1 and 5."]
+      redirect_to reviews_edit_path(review: @review, liquor_store: @review.liquor_store)
+    end
   end
 
   def destroy
