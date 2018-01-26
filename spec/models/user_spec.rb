@@ -21,20 +21,20 @@ describe User do
 end
 
 
-describe User do
-  before(:each) do
-    @user = User.create(name: "Lindsay", password: "LC")
-    @user2 = User.create(name: "Andrea", password: "AC")
-    @user.follow(@user2)
-    @user2.follow(@user)
-    @user.unfollow(@user2)
-  end
-
-  it 'can have followers' do
-    expect(@user2.following?(@user)).to be(true)
-  end
-
-  it 'can unfollow' do
-    expect(@user.following?(@user2)).to be(false)
-  end
-end
+# describe User do
+#   before(:each) do
+#     @user = User.create(name: "Lindsay", password: "LC")
+#     @user2 = User.create(name: "Andrea", password: "AC")
+#     @user.follow(@user2)
+#     @user2.follow(@user)
+#     @user.unfollow(@user2)
+#   end
+#
+#   it 'can have followers' do
+#     expect(@user2.following?(@user)).to be(true)
+#   end
+#
+#   it 'can unfollow' do
+#     expect(@user.following?(@user2)).to be(false)
+#   end
+# end
