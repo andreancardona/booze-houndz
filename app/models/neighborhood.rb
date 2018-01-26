@@ -1,7 +1,7 @@
 class Neighborhood < ApplicationRecord
   has_many :liquor_stores
 
-  ZIP_ARRAY =
+  def zip_array
     [{"Bronx"=> [
       {"Central Bronx"=>["10453", "10457", "10460"]},
       {"Bronx Park and Fordham"=>["10458", "10467", "10468"]},
@@ -53,9 +53,9 @@ class Neighborhood < ApplicationRecord
       {"South Shore"=>["10306", "10307", "10308", "10309", "10312"]},
       {"Stapleton and St. George"=>["10301", "10304", "10305"]},
       {"Mid-Island"=>["10314"]}]}]
+  end
 
-
-  def burough
+  def hood
 
   end
 end
