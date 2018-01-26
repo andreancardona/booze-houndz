@@ -48,8 +48,10 @@
    margin-top: 10%;
  }
 
- .btn-2 {
-   margin-top: 5%;
+ .edit_review_button {
+   font-family: 'Voltaire', sans-serif !important;
+   font-size: 20px !important;
+   margin-top: -8%
  }
 
 .front-image_1 {
@@ -142,15 +144,17 @@
 
 .edit_profile_button{
   font-family: 'Voltaire', sans-serif !important;
-  font-size: 18px !important;
-  padding-top: 10px;
+  font-size: 20px !important;
+  margin-top: -8%;
 }
 
 .body {
-  border: solid black;
+  border-top: solid black;
+  border-bottom: solid black;
   text-align:left;
   padding-left: 60px;
   padding-right: 60px;
+  padding-bottom: 10px;
 
 }
 
@@ -219,13 +223,6 @@
 .edit_name_password {
   font-family: 'Voltaire', sans-serif !important;
   font-size: 18px !important;
-  padding-left: 40px;
-}
-
-.delete_profile_button{
-  font-family: 'Voltaire', sans-serif !important;
-  font-size: 18px !important;
-  padding-top: 30px;
   padding-left: 40px;
 }
 
@@ -333,4 +330,13 @@
   font-family: 'Voltaire', sans-serif !important;
   font-size: 18px !important;
   padding-left: 40px;
+}
+
+.follow_unfollow_button{
+  margin-right: 300px;
+}
+
+.new_review_on_page{
+  font-family: 'Voltaire', sans-serif !important;
+  font-size: 20px !important;
 }
