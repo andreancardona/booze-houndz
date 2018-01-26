@@ -1,8 +1,41 @@
-<div class="zip_codes">NYC Zip Codes!</div>
+<div class="zip_codes">Liquor Stores by Location!</div>
 <div class="each_zip_code">
 <ul>
-  <% @neighborhoods.each do |n| %>
-  <li style="list-style-type: none;"><%= link_to n.name, n %></li>
-  <% end %>
+  <h1>Bronx</h1>
+  <% @neighborhoods.map do |n| %>
+    <%  if n.borough == "Bronx" %>
+      <li style="list-style-type: none;"> <%= link_to n.name, n %> - <%= n.hood %></li>
+    <% end %>
+  <% end %><br><br>
+  <h1>Broooklyn</h1>
+  <% @neighborhoods.map do |n| %>
+    <%  if n.borough == "Brooklyn" %>
+      <li style="list-style-type: none;"> <%= link_to n.name, n %> - <%= n.hood %></li>
+    <% end %>
+  <% end %><br><br>
+  <h1>Manhattan</h1>
+  <% @neighborhoods.map do |n| %>
+    <%  if n.borough == "Manhattan" %>
+      <li style="list-style-type: none;"> <%= link_to n.name, n %> - <%= n.hood %></li>
+    <% end %>
+  <% end %><br><br>
+  <h1>Queens</h1>
+  <% @neighborhoods.map do |n| %>
+    <%  if n.borough == "Queens" %>
+      <li style="list-style-type: none;"> <%= link_to n.name, n %> - <%= n.hood %></li>
+    <% end %>
+  <% end %><br><br>
+  <h1>Staten Island</h1>
+  <% @neighborhoods.map do |n| %>
+    <%  if n.borough == "Staten Island" %>
+      <li style="list-style-type: none;"> <%= link_to n.name, n %> - <%= n.hood %></li>
+    <% end %>
+  <% end %><br><br>
+  <h1>New Jersey</h1>
+  <% @neighborhoods.map do |n| %>
+    <%  if n.borough == "New Jersey" %>
+      <li style="list-style-type: none;"> <%= link_to n.name, n %> - <%= n.hood %></li>
+    <% end %>
+  <% end %><br><br>
 </ul>
 </div>

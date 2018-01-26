@@ -2,7 +2,7 @@
 <div class="each_liquor_store">
 <ul>
   <% @liquor_stores.each do |ls| %>
-    <li style="list-style-type: none;"><%= link_to ls.name, ls %> | <%= link_to ls.neighborhood.name, ls.neighborhood %></li></li>
+    <li style="list-style-type: none;"><%= link_to ls.name, ls %> | <%= ls.neighborhood.borough %>, <%= ls.neighborhood.hood %>, <%= link_to ls.neighborhood.name, ls.neighborhood %></li></li>
   <% end %>
 </ul>
 </div>
