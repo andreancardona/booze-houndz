@@ -1,40 +1,9 @@
 class Neighborhood < ApplicationRecord
   has_many :liquor_stores
 
-  ZIP_ARRAY =
-    [{"Bronx"=> [
-      {"Central Bronx"=>["10453", "10457", "10460"]},
-      {"Bronx Park and Fordham"=>["10458", "10467", "10468"]},
-      {"High Bridge and Morrisania"=>["10451", "10452", "10456"]},
-      {"Hunts Point and Mott Haven"=>["10454", "10455", "10459", "10474"]},
-      {"Kingsbridge and Riverdale"=>["10463", "10471"]},
-      {"Northeast Bronx"=>["10466", "10469", "10470", "10475"]},
-      {"Southeast Bronx"=>["10461", "10462", "10464", "10465", "10472", "10473"]}]},
-
-    {"Brooklyn"=> [
-      {"Central Brooklyn"=>["11212", "11213", "11216", "11233", "11238"]},
-      {"Southwest Brooklyn"=>["11209", "11214", "11228"]},
-      {"Borough Park"=>["11204", "11218", "11219", "11230"]},
-      {"Canarsie and Flatlands"=>["11234", "11236", "11239"]},
-      {"Southern Brooklyn"=>["11223", "11224", "11229", "11235"]},
-      {"Northwest Brooklyn"=>["11201", "11205", "11215", "11217", "11231"]},
-      {"Flatbush"=>["11203", "11210", "11225", "11226"]},
-      {"East New York and New Lots"=>["11207", "11208"]},
-      {"Greenpoint"=>["11211", "11222"]},
-      {"Sunset Park"=>["11220", "11232"]},
-      {"Bushwick and Williamsburg"=>["11206", "11221", "11237"]}]},
-
+  def zip_array
     {"Manhattan"=> [
-      {"Central Harlem"=>["10026", "10027", "10030", "10037", "10039"]},
-      {"Chelsea and Clinton"=>["10001", "10011", "10018", "10019", "10020", "10036"]},
-      {"East Harlem"=>["10029", "10035"]},
-      {"Gramercy Park and Murray Hill"=>["10010", "10016", "10017", "10022"]},
-      {"Greenwich Village and Soho"=>["10012", "10013", "10014"]},
-      {"Lower Manhattan"=>["10004", "10005", "10006", "10007", "10038", "10280"]},
-      {"Lower East Side"=>["10002", "10003", "10009"]},
-      {"Upper East Side"=>["10021", "10028", "10044", "10065", "10075", "10128"]},
-      {"Upper West Side"=>["10023", "10024", "10025"]},
-      {"Inwood and Washington Heights"=>["10031", "10032", "10033", "10034", "10040"]}]},
+      ,
 
     {"Queens"=> [
       {"Northeast Queens"=>["11361", "11362", "11363", "11364"]},
@@ -53,9 +22,129 @@ class Neighborhood < ApplicationRecord
       {"South Shore"=>["10306", "10307", "10308", "10309", "10312"]},
       {"Stapleton and St. George"=>["10301", "10304", "10305"]},
       {"Mid-Island"=>["10314"]}]}]
+  end
 
+  def hood_finder
+    {"10453"=>["Central Bronx", "Bronx"],
+    "10457"=>["Central Bronx", "Bronx"],
+    "10460"=>["Central Bronx", "Bronx"],
+    "10458"=>["Bronx Park and Fordham", "Bronx"],
+    "10467"=>["Bronx Park and Fordham", "Bronx"],
+    "10468"=>["Bronx Park and Fordham", "Bronx"],
+    "10451"=>["High Bridge and Morrisania", "Bronx"],
+    "10452"=>["High Bridge and Morrisania", "Bronx"],
+    "10456"=>["High Bridge and Morrisania", "Bronx"],
+    "10454"=>["Hunts Point and Mott Haven", "Bronx"],
+    "10455"=>["Hunts Point and Mott Haven", "Bronx"],
+    "10459"=>["Hunts Point and Mott Haven", "Bronx"],
+    "10474"=>["Hunts Point and Mott Haven", "Bronx"],
+    "10463"=>["Kingsbridge and Riverdale", "Bronx"],
+    "10471"=>["Kingsbridge and Riverdale", "Bronx"],
+    "10466"=>["Northeast Bronx", "Bronx"],
+    "10469"=>["Northeast Bronx", "Bronx"],
+    "10470"=>["Northeast Bronx", "Bronx"],
+    "10475"=>["Northeast Bronx", "Bronx"],
+    "10461"=>["Southeast Bronx", "Bronx"],
+    "10462"=>["Southeast Bronx", "Bronx"],
+    "10464"=>["Southeast Bronx", "Bronx"],
+    "10465"=>["Southeast Bronx", "Bronx"],
+    "10472"=>["Southeast Bronx", "Bronx"],
+    "10473"=>["Southeast Bronx", "Bronx"],
+    "11212"=>["Central Brooklyn", "Brooklyn"],
+    "11213"=>["Central Brooklyn", "Brooklyn"],
+    "11216"=>["Central Brooklyn", "Brooklyn"],
+    "11233"=>["Central Brooklyn", "Brooklyn"],
+    "11238"=>["Central Brooklyn", "Brooklyn"],
+    "11209"=>["Southwest Brooklyn", "Brooklyn"],
+    "11214"=>["Southwest Brooklyn", "Brooklyn"],
+    "11228"=>["Southwest Brooklyn", "Brooklyn"],
+    "11204"=>["Borough Park", "Brooklyn"],
+    "11218"=>["Borough Park", "Brooklyn"],
+    "11219"=>["Borough Park", "Brooklyn"],
+    "11230"=>["Borough Park", "Brooklyn"],
+    "11234"=>["Canarsie and Flatlands", "Brooklyn"],
+    "11236"=>["Canarsie and Flatlands", "Brooklyn"],
+    "11239"=>["Canarsie and Flatlands", "Brooklyn"],
+    "11223"=>["Southern Brooklyn", "Brooklyn"],
+    "11224"=>["Southern Brooklyn", "Brooklyn"],
+    "11229"=>["Southern Brooklyn", "Brooklyn"],
+    "11235"=>["Southern Brooklyn", "Brooklyn"],
+    "11201"=>["Northwest Brooklyn", "Brooklyn"],
+    "11205"=>["Northwest Brooklyn", "Brooklyn"],
+    "11215"=>["Northwest Brooklyn", "Brooklyn"],
+    "11217"=>["Northwest Brooklyn", "Brooklyn"],
+    "11231"=>["Northwest Brooklyn", "Brooklyn"],
+    "11203"=>["Flatbush", "Brooklyn"],
+    "11210"=>["Flatbush", "Brooklyn"],
+    "11225"=>["Flatbush", "Brooklyn"],
+    "11226"=>["Flatbush", "Brooklyn"],
+    "11207"=>["East New York and New Lots", "Brooklyn"],
+    "11208"=>["East New York and New Lots", "Brooklyn"],
+    "11211"=>["Greenpoint", "Brooklyn"],
+    "11222"=>["Greenpoint", "Brooklyn"],
+    "11220"=>["Sunset Park", "Brooklyn"],
+    "11232"=>["Sunset Park", "Brooklyn"],
+    "11206"=>["Bushwick and Williamsburg", "Brooklyn"],
+    "11221"=>["Bushwick and Williamsburg", "Brooklyn"],
+    "11237"=>["Bushwick and Williamsburg", "Brooklyn"],
+    "10026"=>["Central Harlem", "Manhattan"],
+    "10027"=>["Central Harlem", "Manhattan"],
+    "10030"=>["Central Harlem", "Manhattan"],
+    "10037"=>["Central Harlem", "Manhattan"],
+    "10039"=>["Central Harlem", "Manhattan"],
+    "10001"=>["Chelsea and Clinton", "Manhattan"],
+    "10011"=>["Chelsea and Clinton", "Manhattan"],
+    "10018"=>["Chelsea and Clinton", "Manhattan"],
+    "10019"=>["Chelsea and Clinton", "Manhattan"],
+    "10020"=>["Chelsea and Clinton", "Manhattan"],
+    "10036"=>["Chelsea and Clinton", "Manhattan"],
+    "10029"=>["East Harlem", "Manhattan"],
+    "10035"=>["East Harlem", "Manhattan"],
+    "10010"=>["Gramercy Park and Murray Hill", "Manhattan"],
+    "10016"=>["Gramercy Park and Murray Hill", "Manhattan"],
+    "10017"=>["Gramercy Park and Murray Hill", "Manhattan"],
+    "10022"=>["Gramercy Park and Murray Hill", "Manhattan"],
+    "10012"=>["Greenwich Village and Soho", "Manhattan"],
+    "10013"=>["Greenwich Village and Soho", "Manhattan"],
+    "10014"=>["Greenwich Village and Soho", "Manhattan"],
+    "10004"=>["Lower Manhattan", "Manhattan"],
+    "10005"=>["Lower Manhattan", "Manhattan"],
+    "10006"=>["Lower Manhattan", "Manhattan"],
+    "10007"=>["Lower Manhattan", "Manhattan"],
+    "10008"=>["Lower Manhattan", "Manhattan"],
+    "10280"=>["Lower Manhattan", "Manhattan"],
+    "10002"=>["Lower East Side", "Manhattan"],
+    "10003"=>["Lower East Side", "Manhattan"],
+    "10009"=>["Lower East Side", "Manhattan"],
+    "10021"=>["Upper East Side", "Manhattan"],
+    "10028"=>["Upper East Side", "Manhattan"],
+    "10044"=>["Upper East Side", "Manhattan"],
+    "10065"=>["Upper East Side", "Manhattan"],
+    "10074"=>["Upper East Side", "Manhattan"],
+    "10128"=>["Upper East Side", "Manhattan"],
+    "10031"=>["Inwood and Washington Heights", "Manhattan"],
+    "10032"=>["Inwood and Washington Heights", "Manhattan"],
+    "10033"=>["Inwood and Washington Heights", "Manhattan"],
+    "10034"=>["Inwood and Washington Heights", "Manhattan"],
+    "10040"=>["Inwood and Washington Heights", "Manhattan"],
+
+  end
 
   def hood
+    zip = self.name
+    if hood_finder[zip]
+      hood_finder[zip][0]
+    else
+      "New Jersey"
+    end
+  end
 
+  def borough
+    zip = self.name
+    if hood_finder[zip]
+      hood_finder[zip][1]
+    else
+      "New Jersey"
+    end
   end
 end
