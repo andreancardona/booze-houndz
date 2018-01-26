@@ -91,11 +91,11 @@
 }
 
 .user_stats{
-  border-bottom: solid black;
   padding-top: 10px !important;
   padding-bottom: 10px !important;
   font-family: 'Amatic SC', cursive;
   font-size: 22px !important;
+  text-align: center;
 }
 
 
@@ -151,6 +151,7 @@
   text-align:left;
   padding-left: 60px;
   padding-right: 60px;
+
 }
 
 .show_following_header{
