@@ -1,4 +1,5 @@
-<h1>CREATE A REVIEW</h1>
+<div class="new_create_review">Create A Review</div>
+<div class="create_review_button">
 <%= render "errors/error_messages"%>
 <%= form_for @review  do |f| %>
   <%= f.label :content %>
@@ -9,3 +10,4 @@
   <%= f.hidden_field :liquor_store_id,value: @liquor_store.id %>
   <%= f.submit %>
 <% end %>
+</div>

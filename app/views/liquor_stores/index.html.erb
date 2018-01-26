@@ -1,6 +1,8 @@
-<h1> ALL THE LIQUOR STORES</h1>
+<div class="all_liquor_stores">All NYC Liquor Stores!</div>
+<div class="each_liquor_store">
 <ul>
   <% @liquor_stores.each do |ls| %>
-    <li><%= link_to ls.name, ls %> | <%= link_to ls.neighborhood.name, ls.neighborhood %></li></li>
+    <li style="list-style-type: none;"><%= link_to ls.name, ls %> | <%= link_to ls.neighborhood.name, ls.neighborhood %></li></li>
   <% end %>
 </ul>
+</div>

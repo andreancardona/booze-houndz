@@ -1,6 +1,8 @@
-<h1> ALL THE ZIP CODES</h1>
+<div class="zip_codes">NYC Zip Codes!</div>
+<div class="each_zip_code">
 <ul>
   <% @neighborhoods.each do |n| %>
-  <li><%= link_to n.name, n %></li>
+  <li style="list-style-type: none;"><%= link_to n.name, n %></li>
   <% end %>
 </ul>
+</div>

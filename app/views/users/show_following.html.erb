@@ -2,19 +2,23 @@
 <div class="row">
   <aside class="col-md-4">
     <section class="user_info">
-      <h1><%= @user.name %></h1>
+
+      <div class="show_followers_header">
+        <%= @user.name %>
+      </div>
+
     </section>
     <section class="stats">
       <%= render 'shared/stats' %>
     </section>
   </aside>
   <div class="col-md-8">
-    <h3><%= @title %></h3>
+    <div class="show_following_2"><%= @title %></div>
     <% if @users.any? %>
-      <ul class="users follow">
+      <ul class="users_follow">
         <ul>
           <% @user.following.each do |u| %>
-            <li><%= link_to u.name, u %></li>
+            <li style="list-style-type: none;"><%= link_to u.name, u %></li>
         <% end %>
       </ul>
       </ul>

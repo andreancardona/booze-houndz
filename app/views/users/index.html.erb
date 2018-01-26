@@ -1,8 +1,9 @@
-<h1> ALL THE USERS</h1>
-</head>
+<div class="all_buddies">Find your Booze Buddy!</div>
 
+<div class="each_buddy">
 <ul>
   <% @users.each do |u| %>
-  <li><%= link_to u.name, u %></li>
+  <li style="list-style-type: none;"><%= link_to u.name, u %></li>
   <% end %>
 </ul>
+</div>

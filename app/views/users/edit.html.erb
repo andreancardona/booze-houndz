@@ -1,6 +1,7 @@
 <% if current_user == @user %>
-  <h1>Editing <%= @user.name %></h1>
+<div class="edit_user">Editing <%= @user.name %></div>
     <%= form_for @user  do |f| %>
+    <div class="edit_name_password">
       <%= f.label :name %>
       <%= f.text_field :name %>
       <br />
@@ -12,6 +13,6 @@
 
       <%= f.submit %>
     <% end %>
-
-    <%= button_to "Delete Your Profile", @user, method: :delete %>
-<% end %>
+</div>
+<div class="delete_profile_button"><%= button_to "Delete Your Profile", @user, method: :delete %>
+<% end %></div>

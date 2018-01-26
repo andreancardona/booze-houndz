@@ -1,18 +1,19 @@
-<h1><%= @liquor_store.name %></h1>
+<div class="liquor_store_name"><%= @liquor_store.name %></div>
 
-
-<%= @liquor_store.price %>
+<div class="liquor_store_info">
+<p><%= @liquor_store.price %></p>
 <p><%= @liquor_store.address1 %> <%= @liquor_store.address2 %></p>
 <p><%= @liquor_store.city %>, <%= @liquor_store.state %> <%= @liquor_store.zip_code %></p>
 <p><%= @liquor_store.display_phone %></p>
-
-<br><br>
-<h3>Reviews</h3>
+</div>
+<div class="see_more"><%= link_to "See more Liquor Stores nearby", @liquor_store.neighborhood %></div>
+<div class="liquor_store_review_header">Reviews
 <% if @liquor_store.average_rating > 0 %>
   <p>Average rating: <%= @liquor_store.average_rating %></p>
 <% else %>
   <p>Be the first to rate this liquor store!</p>
 <% end %>
+</div>
 
 <ul>
   <% @liquor_store.reviews.each do |r| %>
@@ -20,11 +21,7 @@
       Review by <%= link_to r.user.name, r.user %>
   <% end %>
 </ul>
-<h4><%= link_to "Write a Review", reviews_new_path(liquor_store: @liquor_store), method: :post  %></h4>
+<div class="write_a_review"><%= link_to "Write a Review", reviews_new_path(liquor_store: @liquor_store), method: :post  %></div>
 
 <br>
 <img src="<%= @liquor_store.image %>" alt="">
-
-
-<br><br>
-<%= link_to "See more Liquor Stores nearby", @liquor_store.neighborhood %>

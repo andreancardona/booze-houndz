@@ -14,8 +14,10 @@ Rails.application.routes.draw do
 
   get "signup", to: "users#new", as: "signup"
   get "login", to: "sessions#new", as: "login"
+  # post "login", to: "sessions#new", as: "login"
   post "sessions", to: "sessions#create", as: "sessions"
   delete "sessions", to: "sessions#destroy"
   get "reviews/new", to: "reviews#new"
-  get "reviews/edit", to: "reviews#edit"
+  post "reviews/edit", to: "reviews#edit"
+  # get "reviews/edit", to: "reviews#edit"
 end
