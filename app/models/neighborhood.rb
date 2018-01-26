@@ -55,7 +55,7 @@ class Neighborhood < ApplicationRecord
       {"Mid-Island"=>["10314"]}]}]
 
 
-  def burough
+  def hood
 
   end
 end

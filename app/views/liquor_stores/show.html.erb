@@ -5,6 +5,7 @@
 <p><%= @liquor_store.address1 %> <%= @liquor_store.address2 %></p>
 <p><%= @liquor_store.city %>, <%= @liquor_store.state %> <%= @liquor_store.zip_code %></p>
 <p><%= @liquor_store.display_phone %></p>
+<a target="_blank" href="<%= @liquor_store.get_map %>">View in Google Maps</a>
 </div>
 <div class="see_more"><%= link_to "See more Liquor Stores nearby", @liquor_store.neighborhood %></div>
 <div class="liquor_store_review_header">Reviews

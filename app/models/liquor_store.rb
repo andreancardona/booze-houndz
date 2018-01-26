@@ -24,4 +24,8 @@ class LiquorStore < ApplicationRecord
       0
     end
   end
+
+  def get_map
+    "https://www.google.com/maps/place/#{self.address1}+#{self.city}+#{self.state}+#{self.zip_code}"
+  end
 end
