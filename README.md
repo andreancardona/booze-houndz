@@ -1,4 +1,4 @@
 # Booze Houndz
 
-(booze-houndz-homepage.png)
+![homepage](booze-houndz-homepage.png)
 
