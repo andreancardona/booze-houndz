@@ -1,10 +1,12 @@
 <h1>Booze Houndz by the Numbers</h1>
 <p><%= link_to "Active Users:", users_path %> <%= @users.length %></p>
-<p>User with the Most Reviews: <%= link_to @user_with_most_reviews.name, user_path(@user_with_most_reviews) %> - <%= @user_with_most_reviews.reviews.length %> Reviews </p>
 <p><%= link_to "Total Liquor Stores:", liquor_stores_path %> <%= @liquor_stores.length %></p>
-<p>Total Reviews: <%= @reviews.length %></p>
+<p>Total Reviews: <%= @reviews.length %></p><br>
+
+<p>User with the Most Reviews: <%= link_to @user_with_most_reviews.name, user_path(@user_with_most_reviews) %> - <%= @user_with_most_reviews.reviews.length %> Reviews </p>
 <p>Most Reviewed Liquor Store: <%= link_to @most_reviewed_ls.name, liquor_store_path(@most_reviewed_ls) %> - <%= @most_reviewed_ls.reviews.length %> reviews </p>
-<p>Highest Rated Liquor Store: <%= link_to @highest_rated_ls.name, liquor_store_path(@highest_rated_ls) %> - <%= @highest_rated_ls.average_rating %> stars </p>
 <p>Zip Code with the Most Liquor Stores: <%= link_to @zc_with_most_ls.name, neighborhood_path(@zc_with_most_ls) %> - <%= @zc_with_most_ls.liquor_stores.length %> Liquor Stores </p><br>
+
+<p>Highest Rated Liquor Store: <%= link_to @highest_rated_ls.name, liquor_store_path(@highest_rated_ls) %> - <%= @highest_rated_ls.average_rating %> stars </p>
 
 <br><br><br>

@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  letsrate_rater
+  
   has_secure_password
 
   has_many :active_relationships, class_name: "Relationship",

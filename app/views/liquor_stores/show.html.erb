@@ -8,6 +8,9 @@
 <a target="_blank" href="<%= @liquor_store.get_map %>">View in Google Maps</a>
 </div>
 <div class="see_more"><%= link_to "See more Liquor Stores nearby", @liquor_store.neighborhood %></div>
+<br>
+<img src="<%= @liquor_store.image %>" alt="">
+<br>
 <div class="liquor_store_review_header">Reviews
 <% if @liquor_store.average_rating > 0 %>
   <p>Average rating: <%= @liquor_store.average_rating %></p>
@@ -25,6 +28,3 @@
 </div>
 </ul>
 <div class="write_a_review"><%= link_to "Write a Review", reviews_new_path(liquor_store: @liquor_store), method: :post  %></div>
-
-<br>
-<img src="<%= @liquor_store.image %>" alt="">

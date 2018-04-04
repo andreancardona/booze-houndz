@@ -68,3 +68,5 @@ gem 'figaro'
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'rspec-rails'
+
+gem 'letsrate'

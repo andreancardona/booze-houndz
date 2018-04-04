@@ -1,7 +1,9 @@
 <div class="zip_codes">Liquor Stores by Location!</div>
+
 <div class="each_zip_code">
 <ul>
   <h1>Bronx</h1>
+
   <% @neighborhoods.map do |n| %>
     <%  if n.borough == "Bronx" %>
       <li style="list-style-type: none;"> <%= link_to n.name, n %> - <%= n.hood %></li>

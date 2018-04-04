@@ -5,7 +5,7 @@ require_relative '../config/environment'
 
 #####ADAPTED FROM YELP API's GITHUB
 
-API_KEY = ENV["API_KEY"]
+API_KEY = 'TKCYy6Mimtx1vZ4vgeFAhsYvYXVUguAnAnMfczNyXmbvedsiE19A9docLmU0jmpPU5NVSe6aPOIMlfvI4aG06Baq5DPjIKB97pTOU4Jc-OpGcR-JP40QF9CV4x6YWnYx'
 
 API_HOST = "https://api.yelp.com"
 SEARCH_PATH = "/v3/businesses/search"

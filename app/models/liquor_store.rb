@@ -1,4 +1,6 @@
 class LiquorStore < ApplicationRecord
+  letsrate_rateable "store"
+
   has_many :reviews
   has_many :users, through: :reviews
   belongs_to :neighborhood

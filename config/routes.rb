@@ -19,5 +19,5 @@ Rails.application.routes.draw do
   delete "sessions", to: "sessions#destroy"
   get "reviews/new", to: "reviews#new"
   post "reviews/edit", to: "reviews#edit"
-  # get "reviews/edit", to: "reviews#edit"
+  #get "reviews/edit", to: "reviews#edit"
 end
