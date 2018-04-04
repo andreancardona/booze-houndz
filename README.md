@@ -4,7 +4,7 @@ A Yelp-style business review application to find liquor stores in New York City.
 
 ![homepage](booze-houndz-homepage.png)
 
-[Booze Houndz Demo](https://www.youtube.com/watch?v=v3OBvErbMd4)
+[Booze Houndz Demo](https://youtu.be/3-nz2Q98dhk)
 
 ## How To Use
 
