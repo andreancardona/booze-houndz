@@ -1,4 +1,4 @@
 # Booze Houndz
 
-![front-page-screencap](booze-houndz-homepage.png)
+![Booze Houndz homepage](booze-houndz-homepage.png)
 
