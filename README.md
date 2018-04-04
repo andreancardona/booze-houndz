@@ -19,11 +19,11 @@ A Yelp-style business review application to find liquor stores in New York City.
 
 ## Setup
 
-1.  Fork and clone this repo - https://github.com/lindsaycriswell/booze-houndz.
-2.  Install Gems `bundle install`.
-3.  Setup database `rake db:setup`.
-4.  Run `rake db:seed`.
-5.  Start your server `rails s`.
+1.  Fork and clone this repo - https://github.com/lindsaycriswell/booze-houndz
+2.  Install Gems `bundle install`
+3.  Setup database `rake db:setup`
+4.  Run `rake db:seed`
+5.  Start your server `rails s`
 6.  Navigate to http://localhost:3000
 
 ## Contributors
