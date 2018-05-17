@@ -15,7 +15,7 @@ A Yelp-style business review application to find liquor stores in New York City.
 
 ## Prerequisites
 
-* Ruby v5.1.4
+* Rails v5.1.4
 
 ## Setup
 
